@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RecordsComponent } from './records/records.component';
+import { HttpClientModule } from '@angular/common/http'
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,8 @@ import { RecordsComponent } from './records/records.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
