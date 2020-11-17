@@ -7,7 +7,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RecordsService {
 
-  private REST_API_SERVICE = ""
+  private REST_API_SERVICE = "";
 
   constructor(private httpClient: HttpClient) { }
+
+  public sendGetRequest(){
+    return this.httpClient.get(this.REST_API_SERVICE);
+  }
 }
