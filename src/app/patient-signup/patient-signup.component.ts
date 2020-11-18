@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { first_name } from '../patientR/patient';
-
-// import { from } from 'rxjs';
+import { PatientService } from './../patientR/patient.service';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-patient-signup',
@@ -10,10 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PatientSignupComponent implements OnInit {
   
+  register;
 
-  constructor() { }
+  constructor(private patientService: PatientService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void{
+    this.register = {
+      first_name:'',
+      last_name:'',
+      email:'',
+      phone:'',
+      address:'',
+      date_of_birth:'',
+      age:'',
+      password:'',
+      confirm_password:''
+    };
+  }
+  registerPatient(){
+
   }
 
 }
