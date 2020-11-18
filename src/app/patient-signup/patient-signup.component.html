@@ -1,79 +1,71 @@
-<div class="container land-page">
-    <div class="row">
-        <div class="col s-8 offset-s2">
-            
-            <!-- <div class="card"> -->
-              <div class="container center-align">
-                   <h4>Patient Registration</h4>
-               </div>
+<div class="container">
+  <h4>patient registration</h4>
 
-               <!-- form start -->
-               <div class="row">
-                <form class="col s12">
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <input [(ngModel)]="register.first_name" id="first_name" type="text" class="validate">
-                      <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                      <input [(ngModel)]="register.last_name" id="last_name" type="text" class="validate">
-                      <label for="last_name">Last Name</label>
-                    </div>
-                  </div>
+  <div class="row">
+    <div class="col-md-3"></div>
 
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <i class="material-icons prefix">mail</i>
-                      <input [(ngModel)]="register.email" id="email" type="email" class="validate">
-                      <label for="email">Email</label>
-                    </div>
-
-                    <div class="input-field col s6">
-                      <i class="material-icons prefix">phone</i>
-                      <input [(ngModel)]="register.phone" id="phone" type="tel" class="validate">
-                      <label for="phone">Telephone</label>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="input-field col s12">
-                      <input [(ngModel)]="register.address" id="address" type="text" class="validate">
-                      <label for="address">Address</label>
-                    </div>                    
-                  </div>
-
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <input [(ngModel)]="register.date_of_birth" id="dob" type="date" class="validate">
-                      <label for="date_of_birth">Date of birth</label>
-                    </div>
-
-                    <div class="input-field col s6">                      
-                      <input [(ngModel)]="register.age" id="age" type="number" class="validate">
-                      <label for="age">Age</label>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="input-field col s6">
-                      <input [(ngModel)]="register.password" id="password" type="password" class="validate">
-                      <label for="password">Password</label>
-                    </div>
-
-                    <div class="input-field col s6">
-                      <input [(ngModel)]="register.confirm_password" id="confirm_password" type="password" class="validate">
-                      <label for="confirm_password">Confirm Password</label>
-                    </div>
-                  </div>
-                  
-                  <button (click)="registerPatient()" class="btn waves-effect waves-light" type="submit" name="action">Register
-                    <i class="material-icons right">send</i>
-                  </button>
-                 
-                </form>
-              </div>         
-              
-
+    <div class="col-md-6">
+      <div class="row">
+        <div class="input-field col s6">
+          <input [(ngModel)]="register.first_name" name="first_name" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
         </div>
+        <div class="input-field col s6">
+          <input [(ngModel)]="register.last_name" name="last_name" id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">mail</i>
+          <input [(ngModel)]="register.email" name="email" id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input [(ngModel)]="register.phone" name="phone" id="phone" type="tel" class="validate">
+          <label for="phone">Telephone</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="register.address" name="address" id="address" type="text" class="validate">
+          <label for="address">Address</label>
+        </div>                    
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input [(ngModel)]="register.date_of_birth" name="date_of_birth" id="dob" type="date" class="validate">
+          <label for="date_of_birth">Date of birth</label>
+        </div>
+
+        <div class="input-field col s6">                      
+          <input [(ngModel)]="register.age" name="age" id="age" type="number" class="validate">
+          <label for="age">Age</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s6">
+          <input [(ngModel)]="register.password" name="password" id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+
+        <div class="input-field col s6">
+          <input [(ngModel)]="register.confirm_password" name="confirm_password" id="confirm_password" type="password" class="validate">
+          <label for="confirm_password">Confirm Password</label>
+        </div>
+      </div>
+
+      <button (click)="registerPatient()" class="btn waves-effect waves-light" type="submit" name="action">Register
+        <i class="material-icons right">send</i>
+      </button>  
     </div>
+
+    <div class="col-md-3"></div>
+  </div>
 </div>

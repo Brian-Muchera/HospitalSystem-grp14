@@ -5,13 +5,14 @@ import { from } from 'rxjs';
 @Component({
   selector: 'app-patient-signup',
   templateUrl: './patient-signup.component.html',
-  styleUrls: ['./patient-signup.component.css']
+  styleUrls: ['./patient-signup.component.css'],
+  providers: [PatientService]
 })
 export class PatientSignupComponent implements OnInit {
   
   register;
 
-  constructor(private patientService: PatientService) { }
+  constructor(private patientService: PatientService ) { }
 
   ngOnInit(): void{
     this.register = {
@@ -27,6 +28,12 @@ export class PatientSignupComponent implements OnInit {
     };
   }
   registerPatient(){
+    this.patientService.registerNewPatient(this.register).subscribe (
+      Response => {
+        alert('patient ' + this.register.email +  'has been created Successfully!!')
+      },
+      error => console.log('error',error)
+    );
 
   }
 
