@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "hospital"
+    }
+  },
+  "defaultProject": "hospital",
+  "cli": {
+    "analytics": "53274a49-1f09-40ce-bb87-0757d52fef75"
+  }
 }
