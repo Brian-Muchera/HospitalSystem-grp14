@@ -10,14 +10,19 @@ import { PatientLoginComponent } from './components/patient-login/patient-login.
 import { DoctorLoginComponent } from './components/doctor-login/doctor-login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginService } from 'src/app/services/login.service';
+import { UserBoardComponent } from './components/user-board/user-board.component';
+import { DoctorsBoardComponent } from './components/doctors-board/doctors-board.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginBoardComponent,
     PatientLoginComponent,
-    DoctorLoginComponent
+    DoctorLoginComponent,
+    UserBoardComponent,
+    DoctorsBoardComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,7 @@ import { LoginService } from 'src/app/services/login.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [LoginService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

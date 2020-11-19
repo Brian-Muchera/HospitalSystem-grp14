@@ -1,35 +1,83 @@
-<div class="submit-form">
-    <div *ngIf="!submitted">
+<div class="col-md-3"></div>
+
+
+
+<div class="col-md-6">
+  <div class="card card-container">
+    <img
+      id="profile-img"
+      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+      class="profile-img-card"
+    />
+    <form
+      *ngIf="!isLoggedIn"
+      name="form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      novalidate
+    >
       <div class="form-group">
-        <label for="title">Email</label>
+        <label for="username">Email</label>
         <input
-          type="email"
+          type="text"
           class="form-control"
-          id="email"
-          required
-          [(ngModel)]="patient.email"
           name="email"
+          [(ngModel)]="form.email"
+          required
+          #email="ngModel"
         />
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="f.submitted && email.invalid"
+        >
+          Email is required!
+        </div>
       </div>
-  
       <div class="form-group">
         <label for="password">Password</label>
         <input
           type="password"
           class="form-control"
-          id="password"
-          required
-          [(ngModel)]="patient.password"
           name="password"
+          [(ngModel)]="form.password"
+          required
+          minlength="6"
+          #password="ngModel"
         />
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="f.submitted && password.invalid"
+        >
+          <div *ngIf="password.errors.required">Password is required</div>
+          <div *ngIf="password.errors.minlength">
+            Password must be at least 6 characters
+          </div>
+        </div>
       </div>
-  
-      <button (click)="savePatient()" class="btn btn-success">Submit</button>
-    </div>
-  
-    <div *ngIf="submitted">
-      <h4>You have logged in successfully!</h4>
-      <button class="btn btn-success" (click)="newTutorial()">Add</button>
+      <div class="form-group">
+        <button class="btn btn-primary btn-block">
+          Login
+        </button>
+      </div>
+      <div class="form-group">
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="f.submitted && isLoginFailed"
+        >
+          Login failed: {{ errorMessage }}
+        </div>
+      </div>
+    </form>
+
+    <div class="alert alert-success" *ngIf="isLoggedIn">
+      Logged in as {{ roles }}.
     </div>
   </div>
-  
+</div>
+
+<div class="col-md-3"></div>
+
+

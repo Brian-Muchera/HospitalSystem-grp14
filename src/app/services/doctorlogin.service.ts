@@ -9,16 +9,15 @@ const httpOptions = {
 };
 
 
-
-
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService {
+export class DoctorloginService {
+  
   constructor(private http: HttpClient) { }
 
   login(credentials): Observable<any> {
-    return this.http.post(BASE_API + 'patient/', {
+    return this.http.post(BASE_API + 'doctor/', {
       email: credentials.email,
       password: credentials.password,
     }, httpOptions);
