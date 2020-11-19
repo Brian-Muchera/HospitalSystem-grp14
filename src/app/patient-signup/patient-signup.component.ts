@@ -30,7 +30,7 @@ export class PatientSignupComponent implements OnInit {
   registerPatient(){
     this.patientService.registerNewPatient(this.register).subscribe (
       Response => {
-        alert('patient ' + this.register.email +  'has been created Successfully!!')
+        alert('patient ' + this.register.email + ' has been created Successfully!!')
       },
       error => console.log('error',error)
     );
