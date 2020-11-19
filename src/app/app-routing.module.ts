@@ -12,6 +12,10 @@ const routes: Routes = [
   { path: 'login/patient', component: PatientLoginComponent },
   { path: 'login/doctor', component:  DoctorLoginComponent },
   { path: 'user', component:  UserBoardComponent },
+import { ProfileComponent } from './profile/profile.component';
+
+const routes: Routes = [
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
@@ -19,3 +23,9 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
+
+
+
