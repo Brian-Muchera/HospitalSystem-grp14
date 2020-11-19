@@ -1,1 +1,81 @@
-<p>records works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor</title>
+    <!-- styles -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <br>
+    <nav>
+        <h2>Doctor's Dashboard</h2>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <div class="text-center">
+            <div class="jumbotron" style="background-color: black;">
+                <h1 style="color: #FE346E;">Appointments</h1>
+            </div>
+        </div>
+        <div *ngIf="appointments">
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 style="font-style: italic; text-align: center; text-decoration: underline;">Appointments</h3>
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="col-md-12">
+                        <br><br>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <!-- <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let appointment of appointments ; let i = index">
+                            {{appointment.appointments}}
+                        </li>
+                    </ul> -->
+                    <div *ngFor='let appointment of appointments; let i = index'>
+                        <div>
+                            {{appointment.appointments}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+        
+
+            
+        
+    </div>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+</body>
+
+</html>
