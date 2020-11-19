@@ -7,79 +7,60 @@
     <form>
         <div class="form-group">
             <label for="patient">Patient</label>
-            <input type="text" required class="form-control" id="name">
+            <input type="text" required [(ngModel)]="appointments.patient" name="patient" class="form-control" id="name">
   
         </div>
         <div class="form-group">
   
             <label for="doctor">Doctor</label>
-            <input type="text" required class="form-control" id="name">
+            <input type="text" required [(ngModel)]="appointments.doctor" name="doctor" class="form-control" id="name" >
   
         </div>
         <div class="form-group">
-            <label for="complete">Date</label>
-            <input type='date' id="complete" required>
-  
-        </div>
-
-        <div class="form-group">
-  
-            <label for="name">Time_alloted</label>
-            <input type="text" required class="form-control" id="time">
-  
-        </div>
-        <div class="form-group">
-  
-            <label for="completed">Is_completed</label>
-            <!-- <input type="text" required class="form-control" id="completed"> -->
-            <select cam-variable-name="APPROVED"
-                    cam-variable-type="Boolean">
-            <option value="true">True</option>
-            <option value="false">False</option>
-            </select>
-  
-        </div>
-        <div class="form-group">
-            <label for="confirmed">Is_confirmed</label>
-            <!-- <input type='date' id="confirmed" required> -->
-            <select cam-variable-name="APPROVED"
-                    cam-variable-type="Boolean">
-            <option value="true">True</option>
-            <option value="false">False</option>
-            </select>
+            <label for="complete">Date &nbsp; &nbsp;</label>
+            <input type='date' id="complete" required [(ngModel)]="appointments.date" name="date">
   
         </div>
 
         <div class="form-group">
   
-            <label for="rejected">Is_rejected</label>
-            <!-- <input type="text" required class="form-control" id="rejected"> -->
-            <select cam-variable-name="APPROVED"
-                    cam-variable-type="Boolean">
-            <option value="true">True</option>
-            <option value="false">False</option>
-            </select>
-            
+            <label for="name">Time_alloted &nbsp; &nbsp;</label>
+            <input type="text" required [(ngModel)]="appointments.time_alloted" name="time_alloted"
+            class="form-control" id="time" >
   
         </div>
+        
         <div class="form-group">
-            <label for="complete">created_at</label>
+            <label for="complete">Created at &nbsp; &nbsp;</label>
 
-          
-            <!-- <input type='date' id="complete" required> -->
+            <input type='date' id="complete" required [(ngModel)]="appointments.created_at" name="created_at">
            
         </div>
 
         <div class="form-group">
   
-            <label for="description">Updated at</label>
-            <input type='date' id="complete" required>
+            <label for="description">Updated at &nbsp; &nbsp;</label>
+            <input type='date' id="complete" required [(ngModel)]="appointments.updated_at" name="updated_at">
             
   
         </div>
 
-        <button class="btn btn-success">Submit</button>
+        <!-- <li class="router"> -->
+            <!-- <a routerLink="bookappointments" class="router-link">
+                <button id="submitted" class="btn btn-success">bookappointments</button> -->
 
+                <button (click)="bookAppointments()" class="btn btn-success">Submit</button>
+            
+                <!-- <h4>You submitted successfully!</h4> -->
+            
+                <!-- </a>
+          </li> -->
+          <!-- <div *ngIf="submitted">
+            <h4>You submitted successfully!</h4>
+            <button class="btn btn-success" (click)="bookAppointments()">Add</button>
+          </div> -->
+
+          
     </form>
         </div>
         <div class="col md-6" style="text-align: center; font-size: large;">
@@ -89,6 +70,8 @@
         <h2 class="text-center"><b>Services</b></h2>
         
         </div>
+
     </div>
     
   </div>
+  <!-- <router-outlet></router-outlet> -->

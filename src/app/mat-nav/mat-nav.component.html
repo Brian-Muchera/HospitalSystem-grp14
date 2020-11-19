@@ -8,7 +8,11 @@
       <a mat-list-item href="#">Logout</a>
       <a mat-list-item href="#">Book Appointments</a>
       <a mat-list-item href="#">Doctors</a>
-     
+      <a routerLink="bookappointments" class="nav-link">Add</a>
+      <!-- <li class="nav-item"> -->
+        
+        <!-- <a routerLink="post" class="nav-link">Book</a> -->
+      <!-- </li> -->
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -28,7 +32,9 @@
     <!-- <app-mat-board></app-mat-board>
     <app-mat-table></app-mat-table>
    -->
-   <app-bookin-form></app-bookin-form>
-  
+   
+   <!-- <router-outlet></router-outlet> -->
+   <!-- <app-bookin-form></app-bookin-form> -->
+   <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

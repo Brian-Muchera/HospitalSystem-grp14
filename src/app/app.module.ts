@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,ErrorHandler } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,17 @@ import { MatMenuModule } from '@angular/material/menu';
 import { BookinFormComponent } from './booking/bookin-form/bookin-form.component';
 
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { Routes, RouterModule } from '@angular/router';
+
+import { AuthRequestOptions } from './auth-request';
+
+import { RequestOptions } from '@angular/http';
+import { AuthErrorHandler } from './auth-error-handler';
+import { AuthguardGuard } from './guard/authguard.guard';
+// import { ErrorHandler } from '@an'
+
 
 @NgModule({
   declarations: [
@@ -31,7 +42,11 @@ import { FormsModule } from '@angular/forms';
     MatNavComponent,
     MatTableComponent,
     MatBoardComponent,
-    BookinFormComponent
+    BookinFormComponent,
+    AuthErrorHandler,
+    AuthguardGuard
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -51,9 +66,23 @@ import { FormsModule } from '@angular/forms';
     MatMenuModule,
 
     FormsModule,
+    HttpClientModule
    
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [RouterModule],
+  providers: [
+    {
+      provide: RequestOptions,
+      useClass: AuthRequestOptions,
+      
+  
+    },
+    {
+      provide: ErrorHandler, 
+      useClass: AuthErrorHandler
+    }
+   ],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
