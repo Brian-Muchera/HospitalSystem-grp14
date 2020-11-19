@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import { TokenService } from './services/token.service';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'hospital';
+  private roles: string[];
+  isLoggedIn = false;
+  showUserBoard = false;
+  username: string;
+
+  constructor(private tokenService: TokenService) { }
+
+  ngOnInit() {
+    this.isLoggedIn = !!this.tokenService.getToken();
+
+    if (this.isLoggedIn) {
+      const user = this.tokenService.getUser();
+      this.roles = user.roles;
+
+      this.showUserBoard = this.roles.includes('ROLE_DOCTOR');
+      
+
+      this.username = user.username;
+    }
+  }
+
+  logout() {
+    this.tokenService.signOut();
+    window.location.reload();
+  }
 }
+
+
