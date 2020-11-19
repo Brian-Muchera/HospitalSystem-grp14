@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { PatientSignupComponent } from './patient-signup/patient-signup.component';
 import { from } from 'rxjs';
 
@@ -12,6 +13,14 @@ import { from } from 'rxjs';
   declarations: [
     AppComponent,   
     PatientSignupComponent
+
+import { ProfileComponent } from './profile/profile.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ProfileComponent,
+
   ],
   imports: [
     BrowserModule,
