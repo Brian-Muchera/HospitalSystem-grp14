@@ -1,4 +1,51 @@
 
+<header class="w3l-header-nav">
+    <!--/nav-->
+    <nav class="navbar navbar-expand-lg navbar-light px-lg-0 py-0 px-3 stroke">
+        <div class="container">
+            <a class="navbar-brand" href="#"><span>Hosp</span>ital</a>
+
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa icon-expand fa-bars"></span>
+        <span class="fa icon-close fa-times"></span>
+      </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-lg-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="dashboardlogin">Sign In</a>
+                    </li>
+                </ul>
+
+                <div class="call-support">
+                    <p>Call us for any question</p>
+                    <h5>+254 700 123 456</h5>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--//nav-->
+    <router-outlet></router-outlet>
+
+</header>
+
+<!-- <app-home></app-home>
+<app-about></app-about>
+<app-testimonials></app-testimonials>
+<app-footer></app-footer>
+<app-dashboardlogin></app-dashboardlogin> -->
+
+
 <div id="app">
   <nav class="navbar navbar-expand navbar-dark bg-dark">
     <a href="#" class="navbar-brand">Hospital Management System</a>
@@ -40,4 +87,5 @@
     </div>
 </div>
 <router-outlet></router-outlet>
+
 
