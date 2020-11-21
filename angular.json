@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -88,6 +89,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -121,9 +123,9 @@
       }
     }
   },
+
   "defaultProject": "hospital",
   "cli": {
     "analytics": "53274a49-1f09-40ce-bb87-0757d52fef75"
     "analytics": "9450eeea-f2c5-4aa4-999e-4b6bdeb409c6"
   }
-}

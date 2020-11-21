@@ -6,6 +6,7 @@ import { DoctorLoginComponent } from './components/doctor-login/doctor-login.com
 import { UserBoardComponent } from './components/user-board/user-board.component';
 
 
+
 const routes: Routes = [ 
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginBoardComponent },
@@ -17,6 +18,19 @@ import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
 ];
+
+import { BookinFormComponent } from 'src/app/booking/bookin-form/bookin-form.component'
+// import { BookinFormComponent } from './booking/bookin-form/bookin-form.component';
+
+
+const routes: Routes = [
+  { path: '', redirectTo: 'bookappointments', pathMatch: 'full'},
+  // { path: 'home', component: HomeComponent },
+  { path: 'bookappointments', component: BookinFormComponent }
+
+];
+
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,77 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col md-6">
+            <h2 class="text-center" style="text-align: center; font-size: large;"><b>Book Appointment Here</b></h2>
+    <hr>
+    <form>
+        <div class="form-group">
+            <label for="patient">Patient</label>
+            <input type="text" required [(ngModel)]="appointments.patient" name="patient" class="form-control" id="name">
+  
+        </div>
+        <div class="form-group">
+  
+            <label for="doctor">Doctor</label>
+            <input type="text" required [(ngModel)]="appointments.doctor" name="doctor" class="form-control" id="name" >
+  
+        </div>
+        <div class="form-group">
+            <label for="complete">Date &nbsp; &nbsp;</label>
+            <input type='date' id="complete" required [(ngModel)]="appointments.date" name="date">
+  
+        </div>
+
+        <div class="form-group">
+  
+            <label for="name">Time_alloted &nbsp; &nbsp;</label>
+            <input type="text" required [(ngModel)]="appointments.time_alloted" name="time_alloted"
+            class="form-control" id="time" >
+  
+        </div>
+        
+        <div class="form-group">
+            <label for="complete">Created at &nbsp; &nbsp;</label>
+
+            <input type='date' id="complete" required [(ngModel)]="appointments.created_at" name="created_at">
+           
+        </div>
+
+        <div class="form-group">
+  
+            <label for="description">Updated at &nbsp; &nbsp;</label>
+            <input type='date' id="complete" required [(ngModel)]="appointments.updated_at" name="updated_at">
+            
+  
+        </div>
+
+        <!-- <li class="router"> -->
+            <!-- <a routerLink="bookappointments" class="router-link">
+                <button id="submitted" class="btn btn-success">bookappointments</button> -->
+
+                <button (click)="bookAppointments()" class="btn btn-success">Submit</button>
+            
+                <!-- <h4>You submitted successfully!</h4> -->
+            
+                <!-- </a>
+          </li> -->
+          <!-- <div *ngIf="submitted">
+            <h4>You submitted successfully!</h4>
+            <button class="btn btn-success" (click)="bookAppointments()">Add</button>
+          </div> -->
+
+          
+    </form>
+        </div>
+        <div class="col md-6" style="text-align: center; font-size: large;">
+            <h2 class="text-center"><b>Doctors Available</b></h2>
+        <hr>
+            
+        <h2 class="text-center"><b>Services</b></h2>
+        
+        </div>
+
+    </div>
+    
+  </div>
+  <!-- <router-outlet></router-outlet> -->
