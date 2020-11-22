@@ -1,0 +1,39 @@
+<div class="container" *ngIf="currentUser; else loggedOut">
+  <header class="jumbotron">
+    <h3>
+      <strong>{{ currentUser.username }}</strong> Profile
+    </h3>
+  </header>
+  <p>
+    <strong>Token:</strong>
+    {{ currentUser.accessToken.substring(0, 20) }} ...
+    {{ currentUser.accessToken.substr(currentUser.accessToken.length - 20) }}
+  </p>
+  <p>
+  <strong>Email:</strong>
+    {{ currentUser.email }}
+  </p>
+  <p>
+  <strong>Bio:</strong>
+    {{ currentUser.bio }}
+  </p>
+  <p>
+    <strong>Address:</strong>
+    {{ currentUser.address }}
+  </p>
+  <p>
+    <strong>Phone:</strong>
+    {{ currentUser.phone }}
+  </p>
+  <strong>Roles:</strong>
+  <ul>
+    <li *ngFor="let role of currentUser.roles">
+      {{ role }}
+    </li>
+  </ul>
+</div>
+<div class="lead text-center">
+<ng-template #loggedOut>
+  <h1 class="text align-center" style="padding-top:150px; padding-left:50px;">Dear User Please login first to proceed.Thank you.</h1>
+</ng-template>
+</div>
