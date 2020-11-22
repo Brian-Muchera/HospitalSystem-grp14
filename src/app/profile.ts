@@ -3,10 +3,7 @@ export class Profile {
     username: string;
     accessToken: string;
     bio: string;
-    address: string
-    phone: number
-
-   
-
+    address: string;
+    phone: number;
 
 }
