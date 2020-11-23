@@ -22,7 +22,7 @@ export class AppComponent {
       const user = this.tokenService.getUser();
       this.roles = user.roles;
 
-      this.showUserBoard = this.roles.includes('ROLE_DOCTOR');
+      this.showUserBoard = this.roles.includes('ROLE_USER');
       
 
       this.username = user.username;

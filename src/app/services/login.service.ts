@@ -18,7 +18,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   login(credentials): Observable<any> {
-    return this.http.post(BASE_API + 'patient/', {
+    return this.http.post(BASE_API + 'user/', {
       email: credentials.email,
       password: credentials.password,
     }, httpOptions);
