@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const BASE_API = 'http://127.0.0.1:8000/api/login/';
+const BASE_API = 'https://hosi14.herokuapp.com/api/login/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
