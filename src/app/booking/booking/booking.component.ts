@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { from } from 'rxjs';
 import { AppointmentserviceService } from 'src/app/appointments/appointmentservice.service'
+// import { NgModule } from '@angular/core';
 
 
 @Component({
