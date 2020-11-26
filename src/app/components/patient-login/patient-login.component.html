@@ -1,12 +1,20 @@
-<div class="col-md-3"></div>
+<div class="container pt-4">
+<div class="row">
+<div class="col-md-4"></div>
 
 
 
-<div class="col-md-6">
+<div class="col-md-4">
+
   <div class="card card-container">
+     <div class="sm-jumbotron center-align white-text pt-600"><br>
+      <h4>Patient Login</h4> 
+      <br>
+    </div>
+ 
     <img
       id="profile-img"
-      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4d9ZZYbIu__eTYRAWRQZCRKI0KD2GfXcmkg&usqp=CAU"
       class="profile-img-card"
     />
     <form
@@ -56,8 +64,8 @@
           </div>
         </div>
       </div>
-      <div class="form-group">
-        <button class="btn btn-primary btn-block">
+      <div class="form-group width-75">
+        <button [routerLink]="['/bookappointments']" class="btn" style="background-color:#FE346E !important;">
           Login
         </button>
       </div>
@@ -73,11 +81,12 @@
     </form>
 
     <div class="alert alert-success" *ngIf="isLoggedIn">
-      Logged in as {{ roles }}.
+      Logged in as {{ roles }} a patient.
     </div>
   </div>
 </div>
 
-<div class="col-md-3"></div>
+<div class="col-md-4"></div>
+</div>
 
-
+</div>

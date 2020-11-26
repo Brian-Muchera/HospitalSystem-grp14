@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="row">
+        <div class="col md-6">
+            <h2 class="text-center" style="text-align: center; font-size: large;"><b>Book Appointment Here</b></h2>
+    <hr>
+    <form (ngSubmit)="onSubmit()" id="book">
+       <!-- <div class="form-group">
+            <label for="patient">Patient</label>
+            <input type="text" required [(ngModel)]="appointments.patient" name="patient" class="form-control" id="name">
+  
+        </div>-->
+        <div class="form-group">
+  
+            <label for="doctor">Doctor</label>
+            <input type="text" required [(ngModel)]="appointments.doctor" name="doctor" class="form-control" id="name" >
+  
+        </div>
+        <div class="form-group">
+            <label for="complete">Date &nbsp; &nbsp;</label>
+            <input type='date' id="complete" required [(ngModel)]="appointments.date" name="date">
+  
+        </div>
+
+        <div class="form-group">
+  
+            <label for="name">Time_alloted &nbsp; &nbsp;</label>
+            <input type="text" required [(ngModel)]="appointments.time_alloted" name="time_alloted"
+            class="form-control" id="time" >
+  
+        </div>
+        
+       <!-- <div class="form-group">
+            <label for="complete">Created at &nbsp; &nbsp;</label>
+
+            <input type='date' id="complete" required [(ngModel)]="appointments.created_at" name="created_at">
+           
+        </div>
+
+        <div class="form-group">
+  
+            <label for="description">Updated at &nbsp; &nbsp;</label>
+            <input type='date' id="complete" required [(ngModel)]="appointments.updated_at" name="updated_at">
+            
+  
+        </div>-->
+
+       
+                <button (click)="bookAppointments()" class="btn" style="background-color:#FE346E;">Submit</button>
+            
+    </form>
+        </div>
+        <div class="col md-6" style="text-align: center; font-size: large;">
+         <!--   <h2 class="text-center"><b>Doctors Available</b></h2>-->
+        <hr>
+            
+        <h2 class="text-center"><b>Services</b></h2>
+         <ul>
+            <li>Consultation</li>
+            <li>Dental services</li>
+            <li>Pharmacy</li>
+            <li>Nursing</li>
+            <li>Cardiology</li>
+            <li>Genaral surgery</li>
+            <li>Diagnosis</li>
+            <li>Outpatient</li>
+            <li>X-rays</li>
+            <li>Blood services</li>
+        </ul>
+
+        
+        </div>
+
+    </div>
+    
+  </div>

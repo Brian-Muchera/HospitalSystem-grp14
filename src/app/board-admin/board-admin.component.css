@@ -1,0 +1,12 @@
+.jumbotron {
+    box-shadow: 4px 8px 16px 5px #FE346E;
+    color: #FE346E;
+  }
+  .jumbotron:hover {
+    box-shadow: 4px 8px 16px 5px rgb(34, 35, 36);
+    color: rgb(34, 35, 36);
+  }
+  .card:hover {
+    box-shadow: 4px 8px 16px 5px rgb(34, 35, 36);
+  }
+  

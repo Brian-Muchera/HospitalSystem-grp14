@@ -1,67 +1,70 @@
-<div class="body">
- <div id="profile" class="container-fluid">
-    <div class="row" style=" padding:0; margin:0; top:0; left:0; width: 100%; height: 100vh;">
-        <div class="col-md-3" style="background-color: #FE346E;">
-            <div class="mt-4">
-                <img src="{{profile.image }}" style="width: 300px; height: 300px; border-radius: 50%;" alt="Profile" class="img-thumbnail">
-                <br><br>
-                <!-- <p class="text">Admin</p> -->
-                <h4 >
-                    <span style="font-weight: bold;">{{ profile.user }}</span><br>
-                   
-                </h4>
-                <p >Email: {{ profile.email }}</p>
-                <hr class="bg-secondary">
-                <p style="font-weight:bold;">Bio: {{ profile.bio }}</p>
-                <h5 style="font-family: 'Nanum Myeongjo', serif;font-size: 18px;">
-                    {{ profile.bio }}
-                </h5>
-                <p>
-                    <a class="btn btn-outline-light text-dark mt-3 mb-3" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Edit profile
-                    </a>
-                    </p>
-                    <div class="collapse" id="collapseExample">
-                    <div class="card mb-3">
-                     <div>
-                     <form action="" method="post" enctype="multipart/form-data">
-                     <input type="file">
-                     </form>
-                     <label>update picture</label>
-                     </div>
 
-                        <form>
-                            <div class="card-body">
-                                <div class="form-group">
-                                    <label for="username">Name</label>
-                                    <input type="text" class="form-control"  placeholder="username" >
-                                </div>
-                                <div class="form-group">
-                                    <label for="bio">Bio</label>
-                                    <input type="text" class="form-control"  placeholder="bio" >
-                                </div>
-                                 <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="text" class="form-control"  placeholder="phone" >
-                                </div>
-                                 <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="text" class="form-control"  placeholder="email" >
-                                </div>
-                                 <div class="form-group">
-                                    <label for="address">Address</label>
-                                    <input type="text" class="form-control"  placeholder="address" >
-                                </div>
-                            </div>
-                            <div class="card-footer" style="background-color: white;">
-                                <div class="form-group ">
-                                    <button  class="btn btn-outline-primary">Update Profile</button>
-                                </div>
-                            </div>
-                        </form>
+<body>
+    <br>
+    <div class="container">
+        <header class="card" id="header">
+            <section class="heading">
+                <div class="toggle">
+                </div>
+
+                <h2 class="section-title ml-5" id="detail-header">Update User Details</h2>
+
+
+               
+
+            </section>
+            <form class="text-center p-5" action="#!" id="user-details">
+
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <label class="input-l">First Name :</label>
+                        <input type="text" class="form-control" placeholder="First name">
                     </div>
+                    <div class="col">
+                        <label class="input-r">Last Name :</label>
+                        <input type="text" class="form-control" placeholder="Last name">
                     </div>
-            </div>
-        </div>
-</div>
-     
+
+                </div>
+                <hr class="line">
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <label for="" class="input-l">Username :</label>
+                        <input type="text" class="form-control" placeholder="Username">
+                    </div>
+                    <div class="col">
+                        <label for="" class="input-r">Email Address</label>
+                        <input type="email" id="defaultRegisterFormLastName" class="form-control" placeholder="Email Address">
+                    </div>
+
+                </div>
+                <hr class="line">
+
+                <div class="form-row mb-4">
+                    <div class="col">
+                        <label for="" class="input-l">Password :</label>
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="col">
+                        <label for="" class="input-r">Confirm Password :</label>
+                        <input type="password" id="defaultRegisterFormLastName" class="form-control" placeholder="Confirm Password">
+                    </div>
+
+                </div>
+                <hr class="line">
+                <div class="form-row mb-4">
+                    <div class="col-4">
+                        <label for="" class="input-l">Profile Image</label>
+                        <input type="image" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name">
+                        <button type="button" class="btn">Primary</button>
+                    </div>
+
+
+                </div>
+            </form>
+
+        </header>
+
+
+    </div>
+</body>

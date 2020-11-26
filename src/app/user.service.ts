@@ -15,7 +15,7 @@ export class UserService {
     return this.http.get(BASE_API + 'all', { responseType: 'text' });
   }
 
-  getUserBoard(): Observable<any> {
+  getAdminBoard(): Observable<any> {
     return this.http.get(BASE_API + 'appointments/', { responseType: 'text' });
   }
 

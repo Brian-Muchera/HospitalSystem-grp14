@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Profile } from '../profile';
 
 
 @Component({
@@ -10,15 +9,9 @@ import { Profile } from '../profile';
 })
 export class ProfileComponent implements OnInit {
 
-  profile:Profile;
-
   constructor() { }
 
   ngOnInit(): void {
-  
-
   }
 
-
-  
 }

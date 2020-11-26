@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PatientService } from './../patientR/patient.service';
-import { from } from 'rxjs';
+import { from } from 'rxjs';;
 
 @Component({
   selector: 'app-patient-signup',
@@ -10,7 +10,12 @@ import { from } from 'rxjs';
 })
 export class PatientSignupComponent implements OnInit {
   
-  register;
+register;
+clearForm(){
+  (<HTMLFormElement>document.getElementById("register")).reset();
+  console.log("register");
+ }
+
 
   constructor(private patientService: PatientService ) { }
 
@@ -30,11 +35,20 @@ export class PatientSignupComponent implements OnInit {
   registerPatient(){
     this.patientService.registerNewPatient(this.register).subscribe (
       Response => {
-        alert('patient ' + this.register.email + ' has been created Successfully!!')
+        //alert('patient ' + this.register.email + ' has been created Successfully!!')
+       this.clearForm()
       },
       error => console.log('error',error)
     );
 
   }
+  onSubmit() {
+    if (this.register.valid) {
+      this.clearForm()
 
+    }
+
+
+}     
+                      
 }

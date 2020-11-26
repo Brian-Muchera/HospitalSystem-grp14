@@ -2,7 +2,7 @@
 <br><br>
 <div class="container page pt-4">
   
-  <div class="card">    
+  <div class="card card-2">    
     <div class="sm-jumbotron center-align white-text pt-600"><br>
       <h4>Patient Sign Up</h4> 
       <br>
@@ -10,15 +10,15 @@
 
     <div class="row">
       <div class="col-md-4"></div>
-
       <div class="col-md-4">
+      <form (ngSubmit)="onSubmit()" id="register">
         <div class="row">
           <div class="input-field col s6">
-            <input [(ngModel)]="register.first_name" name="first_name" id="first_name" type="text" class="validate">
+            <input [(ngModel)]="register.first_name" name="first_name" id="first_name" type="text" class="validate" required>
             <label for="first_name">First Name</label>
           </div>
           <div class="input-field col s6">
-            <input [(ngModel)]="register.last_name" name="last_name" id="last_name" type="text" class="validate">
+            <input [(ngModel)]="register.last_name" name="last_name" id="last_name" type="text" class="validate" required>
             <label for="last_name">Last Name</label>
           </div>
         </div>
@@ -26,13 +26,13 @@
         <div class="row">
           <div class="input-field col s6">
             <i class="material-icons prefix">mail</i>
-            <input [(ngModel)]="register.email" name="email" id="email" type="email" class="validate">
+            <input [(ngModel)]="register.email" name="email" id="email" type="email" class="validate" required>
             <label for="email">Email</label>
           </div>
 
           <div class="input-field col s6">
             <i class="material-icons prefix">phone</i>
-            <input [(ngModel)]="register.phone" name="phone" id="phone" type="tel" class="validate">
+            <input [(ngModel)]="register.phone" name="phone" id="phone" type="tel" class="validate" required>
             <label for="phone">Telephone</label>
           </div>
         </div>
@@ -40,43 +40,45 @@
         <div class="row">
           <div class="input-field col s12">
             <i class="material-icons prefix mdi mdi-place">place</i>
-            <input [(ngModel)]="register.address" name="address" id="address" type="text" class="validate">
+            <input [(ngModel)]="register.address" name="address" id="address" type="text" class="validate" required>
             <label for="address">Address</label>
           </div>                    
         </div>
 
         <div class="row">
           <div class="input-field col s6">
-            <input [(ngModel)]="register.date_of_birth" name="date_of_birth" id="dob" type="date" class="validate">
+            <input [(ngModel)]="register.date_of_birth" name="date_of_birth" id="dob" type="date" class="validate" required>
             <label for="date_of_birth">Date of birth</label>
           </div>
 
           <div class="input-field col s6">                      
-            <input [(ngModel)]="register.age" name="age" id="age" type="number" class="validate">
-            <label for="age">Age</label>
+            <input [(ngModel)]="register.age" name="age" id="age" type="number" class="validate" required>
+            <label for="age">Age</label> 
           </div>
         </div>
 
         <div class="row">
           <div class="input-field col s6">
-            <input [(ngModel)]="register.password" name="password" id="password" type="password" class="validate">
+            <input [(ngModel)]="register.password" name="password" id="password" type="password" class="validate" required>
             <label for="password">Password</label>
           </div>
 
           <div class="input-field col s6">
-            <input [(ngModel)]="register.confirm_password" name="confirm_password" id="confirm_password" type="password" class="validate">
+            <input [(ngModel)]="register.confirm_password" name="confirm_password" id="confirm_password" type="password" class="validate" required>
             <label for="confirm_password">Confirm Password</label>
           </div>
         </div>
 
         <div class="card-action">
-          <button (click)="registerPatient()" class="btn btn-lg waves-effect waves-light blue-grey darken-1" type="submit" name="action">Register
-            <i class="material-icons right">send</i>
-          </button>
-        </div>
-      </div>
+          <button (click)="registerPatient()" [routerLink]="['/login']" class="btn" style="background-color:#FE346E;" type="submit" name="action">Register
 
-      <div class="col-md-4"></div>
-    </div>
-  </div>
-</div>
+
+          </button> &nbsp;
+           <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+        
+      </div>
+        <div class="col-md-4">
+           </div>
+<form> 
+
+

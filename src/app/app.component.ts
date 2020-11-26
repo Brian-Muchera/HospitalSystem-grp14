@@ -1,16 +1,16 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TokenService } from './services/token.service';
-
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   private roles: string[];
   isLoggedIn = false;
-  showUserBoard = false;
+  showAdminBoard = false;
+  showModeratorBoard = false;
   username: string;
 
   constructor(private tokenService: TokenService) { }
@@ -22,8 +22,8 @@ export class AppComponent {
       const user = this.tokenService.getUser();
       this.roles = user.roles;
 
-      this.showUserBoard = this.roles.includes('ROLE_USER');
-      
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
 
       this.username = user.username;
     }
@@ -34,5 +34,3 @@ export class AppComponent {
     window.location.reload();
   }
 }
-
-
